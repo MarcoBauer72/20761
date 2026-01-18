@@ -1,0 +1,311 @@
+<?xml version="1.0"?>
+<SqlWorkbenchSqlProject xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Name="Curso_20761_Bauer">
+  <Items>
+    <LogicalFolder Name="Conexões" Type="2" Sorted="true">
+      <Items>
+        <ConnectionNode Name="(local):">
+          <Created>2015-05-13T19:40:07.2557645-03:00</Created>
+          <Type>SQL</Type>
+          <Server>(local)</Server>
+          <UserName />
+          <Authentication>SQL</Authentication>
+          <InitialDB />
+          <LoginTimeout>15</LoginTimeout>
+          <TrustServerCertificate>False</TrustServerCertificate>
+          <EncryptionOption>True</EncryptionOption>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Microsoft SQL Server Management Studio - Query</ApplicationName>
+        </ConnectionNode>
+        <ConnectionNode Name="(local):Bauer">
+          <Created>2018-04-14T13:49:45.380439-03:00</Created>
+          <Type>SQL</Type>
+          <Server>(local)</Server>
+          <UserName>Bauer</UserName>
+          <Authentication>SQL</Authentication>
+          <InitialDB />
+          <LoginTimeout>30</LoginTimeout>
+          <TrustServerCertificate>False</TrustServerCertificate>
+          <EncryptionOption>True</EncryptionOption>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Microsoft SQL Server Management Studio - Query</ApplicationName>
+        </ConnectionNode>
+        <ConnectionNode Name="(local):PRECISION-BAUER\mfwba">
+          <Created>2026-01-18T11:53:46.682005-03:00</Created>
+          <Type>SQL</Type>
+          <Server>(local)</Server>
+          <UserName />
+          <Authentication>Autenticação do Windows</Authentication>
+          <InitialDB />
+          <LoginTimeout>15</LoginTimeout>
+          <TrustServerCertificate>False</TrustServerCertificate>
+          <EncryptionOption>False</EncryptionOption>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Microsoft SQL Server Management Studio - Consulta</ApplicationName>
+        </ConnectionNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="Consultas" Type="0" Sorted="true">
+      <Items>
+        <FileNode Name="Modulo01-Introducao.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:(local):True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>(local)</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Modulo01-Introducao.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Modulo02-Introducao-T-SQL.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:(local):True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>(local)</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Modulo02-Introducao-T-SQL.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Modulo03-Selects.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:(local):True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>(local)</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Modulo03-Selects.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Modulo04-Joins.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:(local):True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>(local)</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Modulo04-Joins.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Modulo05-Ordem_Filtro.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:(local):True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>(local)</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Modulo05-Ordem_Filtro.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Modulo06-DataTypes.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:(local):True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>(local)</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Modulo06-DataTypes.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Modulo07-DML.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:(local):True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>(local)</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Modulo07-DML.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Modulo08-Functions.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:(local):True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>(local)</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Modulo08-Functions.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Modulo09_Grouping.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:(local):True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>(local)</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Modulo09_Grouping.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Modulo10-Subqueries.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:(local):True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>(local)</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Modulo10-Subqueries.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Modulo11-CTE.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:(local):True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>(local)</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Modulo11-CTE.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Modulo12_UNION.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:(local):True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>(local)</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Modulo12_UNION.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Modulo13_RANK.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:(local):True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>(local)</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Modulo13_RANK.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Modulo14_PIVOT.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:(local):True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>(local)</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Modulo14_PIVOT.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Modulo15_StoredProcedures.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:(local):True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>(local)</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Modulo15_StoredProcedures.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Modulo16_Programming.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:(local):True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>(local)</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Modulo16_Programming.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Modulo17-ErrorHandling.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:(local):True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>(local)</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Modulo17-ErrorHandling.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Modulo18-Transactions.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:(local):True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>(local)</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Modulo18-Transactions.sql</FullPath>
+        </FileNode>
+        <FileNode Name="V_DeadLock_Window1.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>V_DeadLock_Window1.sql</FullPath>
+        </FileNode>
+        <FileNode Name="V_DeadLock_Window2.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>V_DeadLock_Window2.sql</FullPath>
+        </FileNode>
+        <FileNode Name="V_Distributed_Queries.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:(local):True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>(local)</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>V_Distributed_Queries.sql</FullPath>
+        </FileNode>
+        <FileNode Name="V_Distributed_Queries-BAUER_ASUSVENTO.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>V_Distributed_Queries-BAUER_ASUSVENTO.sql</FullPath>
+        </FileNode>
+        <FileNode Name="V_FULLTEXTSEARCH.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>V_FULLTEXTSEARCH.sql</FullPath>
+        </FileNode>
+        <FileNode Name="V_OPENXML.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>V_OPENXML.sql</FullPath>
+        </FileNode>
+        <FileNode Name="V_TRIGGERS.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:(local):True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>(local)</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>V_TRIGGERS.sql</FullPath>
+        </FileNode>
+        <FileNode Name="V_XML.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>V_XML.sql</FullPath>
+        </FileNode>
+        <FileNode Name="X_BigTable.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>X_BigTable.sql</FullPath>
+        </FileNode>
+        <FileNode Name="X_Desafio1.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:(local):False:Bauer</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>(local)</AssociatedConnSrvName>
+          <AssociatedConnUserName>Bauer</AssociatedConnUserName>
+          <FullPath>X_Desafio1.sql</FullPath>
+        </FileNode>
+        <FileNode Name="X_Desafio2.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:(local):False:Bauer</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>(local)</AssociatedConnSrvName>
+          <AssociatedConnUserName>Bauer</AssociatedConnUserName>
+          <FullPath>X_Desafio2.sql</FullPath>
+        </FileNode>
+        <FileNode Name="X_Desafio3.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>X_Desafio3.sql</FullPath>
+        </FileNode>
+        <FileNode Name="X_Desafio4.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>X_Desafio4.sql</FullPath>
+        </FileNode>
+        <FileNode Name="X_Objetos_Temporarios.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:(local):True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>(local)</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>X_Objetos_Temporarios.sql</FullPath>
+        </FileNode>
+        <FileNode Name="X-FileTables.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:(local):True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>(local)</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>X-FileTables.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Y_Curiosidades.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:(local):True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>(local)</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Y_Curiosidades.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Y_Debug.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>Y_Debug.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Z_ColumnStore.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>Z_ColumnStore.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Z_METADATA.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:(local):True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>(local)</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Z_METADATA.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Z_Performance.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:(local):True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>(local)</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Z_Performance.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Z-Save_Transaction.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>Z-Save_Transaction.sql</FullPath>
+        </FileNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="Diversos" Type="3" Sorted="true">
+      <Items>
+        <FileNode Name="Alter Authorization.txt">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>Alter Authorization.txt</FullPath>
+        </FileNode>
+        <FileNode Name="Nota.txt">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>Nota.txt</FullPath>
+        </FileNode>
+        <FileNode Name="Pensamento.txt">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>Pensamento.txt</FullPath>
+        </FileNode>
+      </Items>
+    </LogicalFolder>
+  </Items>
+</SqlWorkbenchSqlProject>

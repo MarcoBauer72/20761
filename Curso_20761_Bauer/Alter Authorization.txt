@@ -1,0 +1,5 @@
+ALTER AUTHORIZATION ON DATABASE::AdventureWorks2016 TO "Adventureworks\Student"
+GO
+
+ALTER AUTHORIZATION ON DATABASE::AdventureWorks TO "Adventureworks\Student"
+GO

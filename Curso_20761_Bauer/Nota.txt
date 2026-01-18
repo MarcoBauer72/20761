@@ -1,0 +1,18 @@
+-----------------------------------  CONSIDERAÇÕES IMPORTANTES !!! ----------------------------------- 
+
+Muitos exemplos são de autoria do instrutor Marco Bauer.
+
+Para rodar os exemplos deve-se apontar para o banco de dados AdventureWorks ou AdventureWorksDW.
+
+Os exemplos podem sofrer alteração, melhoria ou adição de código sem aviso prévio ou posterior.
+
+O acesso ao OneDrive é cedido ou removido pelo instrutor por se tratar de pasta particular do mesmo, 
+não sendo portanto, de responsabilidade do centro de treinamento nem tampouco da Microsoft.
+
+Não há restrição quanto a cópia, divulgação e reprodução deste material.
+
+
+------------------------------------------- BONS ESTUDOS ! -------------------------------------------
+
+By M.B.
+
