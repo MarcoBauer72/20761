@@ -1,0 +1,12 @@
+Baixar o AdventureWorks 2014
+
+Download:
+http://msftdbprodsamples.codeplex.com/
+
+
+How Install:
+http://pcteach.me/featured-articles/analysis-services-prerequisite-guide/
+
+
+PDFs SQL gratuitos:
+www.sqlservercentral.com
