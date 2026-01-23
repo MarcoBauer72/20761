@@ -1,5 +1,0 @@
-customername
-------------------------------
-Veronesi, Giorgio
-
-(1 row(s) affected)
