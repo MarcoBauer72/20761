@@ -1,1 +1,8 @@
+------------------------- Baixar os bancos de exemplo AdventureWorks OLTP e OLAP (DW) -------------------------- 
+--- OLAP ---
+https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksDW2017.bak
+--- OLTP ----
+https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks2017.bak
 
+--- OUTROS DATABASES GRATUITOS PARA TESTES ---
+https://github.com/microsoft/sql-server-samples/tree/master/samples/databases
