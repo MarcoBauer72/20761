@@ -1,2 +1,0 @@
-Error Number: 8115
-Error Message: Arithmetic overflow error converting varchar to data type numeric.
