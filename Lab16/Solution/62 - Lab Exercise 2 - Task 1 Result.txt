@@ -1,5 +1,0 @@
-result
---------------------
-Between 5 and 10
-
-(1 row(s) affected)
