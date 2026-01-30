@@ -421,6 +421,28 @@ AS
 	WHERE PAIS = @PAIS
 )
 
+
+ALTER PROC dbo.USP_Cliente_Pais
+(@PAIS VARCHAR(50))
+AS
+(
+	SELECT 
+	 ID
+	,NOME
+	,PAIS
+	FROM dbo.CLIENTES
+	WHERE PAIS = @PAIS
+	OPTION (RECOMPILE)
+)
+
+
+
+-- OPTION (OPTIMIZE FOR UNKOWN) - como declarar uma variavel local. Bom para tabelas onde os dados estao distruibos igualmente
+
+-- OPTION (OPTIMIZE FOR @ProductID=870) - para o maior retorno de linhas
+
+
+
 ----------------------------------------------------------------------------------------
 
 

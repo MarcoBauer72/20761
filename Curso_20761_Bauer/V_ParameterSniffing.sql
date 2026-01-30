@@ -26,7 +26,6 @@ WHERE ProductID = 870; -- 4.688 linhas
 CREATE PROCEDURE Get_OrderID_OrderQty
 @ProductID INT
 AS
-
 SELECT SalesOrderDetailID, OrderQty
 FROM Sales.SalesOrderDetail
 WHERE ProductID = @ProductID;
@@ -55,15 +54,24 @@ EXEC Get_OrderID_OrderQty @ProductID=870
 
 
 
--- Recompiling
+-- Recompiling ALL
 ALTER PROCEDURE Get_OrderID_OrderQty
 @ProductID INT
 WITH RECOMPILE
 AS
-
 SELECT SalesOrderDetailID, OrderQty
 FROM Sales.SalesOrderDetail
 WHERE ProductID = @ProductID;
+
+
+-- Recompiling OPTION
+ALTER PROCEDURE Get_OrderID_OrderQty
+@ProductID INT
+AS
+SELECT SalesOrderDetailID, OrderQty
+FROM Sales.SalesOrderDetail
+WHERE ProductID = @ProductID
+OPTION (RECOMPILE)
 
 
 EXEC Get_OrderID_OrderQty @ProductID=870
@@ -71,6 +79,10 @@ EXEC Get_OrderID_OrderQty @ProductID=870
 
 EXEC Get_OrderID_OrderQty @ProductID=897
 
+
+-- OPTION (OPTIMIZE FOR UNKOWN) - como declarar uma variavel local. Bom para tabelas onde os dados estao distruibos igualmente
+
+-- OPTION (OPTIMIZE FOR @ProductID=870) - para o maior retorno de linhas
 
 
 
