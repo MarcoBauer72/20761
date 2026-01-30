@@ -2,8 +2,8 @@
 USE AdventureWorks
 GO
 
-/* N√£o √© recomend√°vel iniciar o nome de Stored Procedures com as letras SP
-   pois Stored Procedures com SP s√£o do MASTER */
+/* N„o È recomend·vel iniciar o nome de Stored Procedures com as letras SP
+   pois Stored Procedures com SP s„o do MASTER */
 
 IF OBJECT_ID ('dbo.usp_sel_empregados', 'P') IS NOT NULL
 DROP PROCEDURE dbo.usp_sel_empregados
@@ -352,7 +352,7 @@ TRUNCATE TABLE dbo.CLIENTES
 		END;	
 
 
--- Cria √≠ndices
+-- Cria Ìndices
 --CREATE CLUSTERED INDEX PK_CLIENTES_ID
 --ON dbo.CLIENTES (ID)
 
@@ -466,5 +466,5 @@ SP_HELPTEXT SP_HELPTEXT
 
 SP_HELPTEXT SP_DEPENDS 'Production.Product'
 
--- Lab. 15 - P√°gina 557 ou 789
--- Exerc√≠cios 1,2 e 3 - 35 minutos
+-- Lab. 15 - P·gina 557 ou 789
+-- ExercÌcios 1,2 e 3 - 35 minutos
