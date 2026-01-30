@@ -1,16 +1,44 @@
 ----- Modulo 15: Executing Stored Procedures
-USE Adventureworks
+USE AdventureWorks
 GO
 
-/* N„o È recomend·vel iniciar o nome de Stored Procedures com as letras SP
-   pois Stored Procedures com SP s„o do MASTER */
+/* N√£o √© recomend√°vel iniciar o nome de Stored Procedures com as letras SP
+   pois Stored Procedures com SP s√£o do MASTER */
 
-IF OBJECT_ID ('usp_sel_empregados', 'P') IS NOT NULL
-DROP PROCEDURE usp_sel_empregados
+IF OBJECT_ID ('dbo.usp_sel_empregados', 'P') IS NOT NULL
+DROP PROCEDURE dbo.usp_sel_empregados
 GO
 
 
-alter PROC usp_sel_empregados
+ALTER PROC dbo.usp_sel_empregados
+@estadocivil char(1) = NULL
+as
+begin
+Select 
+    MaritalStatus
+    ,VacationHours 
+    ,dbo.fn_calculajuros(VacationHours) AS Reducao
+	,'1' AS FIXO
+from [HumanResources].[Employee]
+where MaritalStatus=@estadocivil OR @estadocivil IS NULL
+end
+
+sp_helptext 'dbo.usp_sel_empregados'
+
+
+EXEC dbo.usp_sel_empregados   
+
+
+-- S = 144
+-- M = 146
+-- GERAL = 290
+
+SP_HELPTEXT usp_sel_empregados
+
+usp_sel_empregados
+
+
+
 @estadocivil char(1) = NULL
 as
 begin
@@ -24,18 +52,6 @@ where MaritalStatus=COALESCE(@estadocivil,MaritalStatus)
 end
 
 sp_helptext usp_sel_empregados
-
-
-
-
-SP_HELPTEXT usp_sel_empregados
-
-usp_sel_empregados
-
-
-
-
-
 
 
 EXEC sp_refreshsqlmodule @name = 'usp_sel_empregados'
@@ -192,48 +208,47 @@ SELECT @customerid AS custid, @phonenum AS phone;
 
 
 
-DROP TABLE CLIENTES
+DROP TABLE dbo.CLIENTES
 
-CREATE TABLE CLIENTES (ID INT IDENTITY, NOME VARCHAR(50))
+CREATE TABLE dbo.CLIENTES (ID INT IDENTITY , NOME VARCHAR(50))
 
-INSERT CLIENTES VALUES ('MARCO'),('ANDRESSA')
+INSERT dbo.CLIENTES VALUES ('BAUER'),('ANDRESSA')
 
-SELECT * FROM CLIENTES
+SELECT * FROM dbo.CLIENTES
 
 
 
-CREATE PROC RETORNA_NOME
+CREATE PROC dbo.RETORNA_NOME
 @CODIGO AS INT  
 AS
-SELECT NOME FROM CLIENTES WHERE ID=@CODIGO
+SELECT NOME FROM dbo.CLIENTES WHERE ID=@CODIGO
 
 
-EXEC sp_refreshsqlmodule @name = 'RETORNA_NOME'
+EXEC sp_refreshsqlmodule @name = 'dbo.RETORNA_NOME'
 
 
-EXEC RETORNA_NOME 2
+EXEC dbo.RETORNA_NOME 2
 
-DROP PROC RETORNA_ID
+DROP PROC dbo.RETORNA_ID
 
-ALTER PROC RETORNA_ID 
+CREATE PROC dbo.RETORNA_ID 
 (@NOME VARCHAR(50)
 ,@CODIGO AS INT OUTPUT)
 AS
-INSERT CLIENTES VALUES (@NOME)
-SELECT @CODIGO = IDENT_CURRENT('CLIENTES')
+INSERT dbo.CLIENTES VALUES (@NOME)
+SELECT @CODIGO = IDENT_CURRENT('dbo.CLIENTES')
 
 
 
 
-DECLARE @PESSOA VARCHAR(50)='MARCELO', @ID INT =0 --???
-EXEC RETORNA_ID @NOME=@PESSOA, @CODIGO=@ID OUTPUT
-
+DECLARE @PESSOA VARCHAR(50)='EDUARDO', @ID INT 
+EXEC dbo.RETORNA_ID @NOME=@PESSOA, @CODIGO=@ID OUTPUT
 SELECT @ID
 
 
 
 DECLARE  @ID INT, @PESSOA VARCHAR(50)='MARCELO'
-EXEC RETORNA_ID @NOME=@PESSOA, @CODIGO=@ID OUTPUT
+EXEC dbo.RETORNA_ID @NOME=@PESSOA, @CODIGO=@ID OUTPUT
 
 SELECT @ID
 
@@ -260,9 +275,12 @@ WHERE ProductSubcategoryID = @catid;
 GO
 
 -- Test procedure
-DECLARE @numrows INT = 3, @catid INT = 2;
 
-EXEC Production.ProdsByCategory 6, 2;
+EXEC Production.ProdsByCategory 22, 2;
+
+EXEC Production.ProdsByCategory @numrows = 22, @catid = 2 
+
+DECLARE @numrows INT = 3, @catid INT = 2;
 
 EXEC Production.ProdsByCategory @catid = 2,@numrows = 5
 
@@ -292,63 +310,75 @@ SP_HELPTEXT ProdutoPorCategoria
 
 
 /* Stored Procedure Parameter Sniffing */
-USE [20461]
+USE [20761]
 GO
 
--- Cria Tabela Clientes
+-- Cria Tabela dbo.CLIENTES
 IF EXISTS(SELECT Table_Name FROM information_schema.TABLES
-WHERE table_name='Clientes' and table_Type='Base Table')
-DROP TABLE Clientes
+WHERE table_name='CLIENTES' and table_Type='Base Table')
+DROP TABLE dbo.CLIENTES
 
-CREATE TABLE dbo.Clientes
+CREATE TABLE dbo.CLIENTES
 (
-	 ID INT IDENTITY
+	 ID INT IDENTITY 
 	,NOME VARCHAR(100)
 	,PAIS VARCHAR(50)
 )
 
+SELECT * FROM  dbo.CLIENTES
+TRUNCATE TABLE dbo.CLIENTES
 
--- Popula tabela Clientes
+-- Popula tabela dbo.CLIENTES
 	DECLARE @id int = 1
-	DECLARE @id2 int = 1
-
 	SET NOCOUNT ON;
 
 	WHILE @id <= 10
 		BEGIN
 
-			INSERT dbo.Clientes (NOME,PAIS) 
+			INSERT dbo.CLIENTES (NOME,PAIS) 
 			VALUES ('NOME_' + CAST(@id AS VARCHAR(45)),'PORTUGAL')
 			
 			SET @id += 1;
 		END;
-	
+
+	DECLARE @id2 int = 1	
 	WHILE @id2 <= 200000
 		BEGIN
 
-			INSERT dbo.Clientes (NOME,PAIS) 
+			INSERT dbo.CLIENTES (NOME,PAIS) 
 			VALUES ('NOME_' + CAST(@id2 AS VARCHAR(45)),'BRASIL')
 			
 			SET @id2 += 1;
 		END;	
 
 
--- Cria Ìndice
-CREATE CLUSTERED INDEX PK_CLIENTES_NOME
-ON dbo.Clientes (NOME)
+-- Cria √≠ndices
+--CREATE CLUSTERED INDEX PK_CLIENTES_ID
+--ON dbo.CLIENTES (ID)
 
--- Distribuicao de paises na tabela Clientes
+
+CREATE NONCLUSTERED INDEX PK_CLIENTES_PAIS
+ON dbo.CLIENTES (PAIS)
+ 
+SELECT * FROM dbo.CLIENTES WHERE PAIS = 'PORTUGAL';
+GO
+SELECT * FROM dbo.CLIENTES WHERE PAIS = 'BRASIL';
+GO
+
+
+-- Distribuicao de paises na tabela dbo.CLIENTES
 SELECT
    PAIS
   ,COUNT(*) AS QTY
-FROM dbo.Clientes
+FROM dbo.CLIENTES
 GROUP BY PAIS
 
 -- BRASIL = 200.000 ROWS
 -- PORTUGAL = 10 ROWS
 
+--DROP PROC dbo.USP_Cliente_Pais
 
-CREATE PROC [dbo].USP_Cliente_Pais
+CREATE PROC dbo.USP_Cliente_Pais
 (@PAIS VARCHAR(50))
 AS
 (
@@ -356,18 +386,42 @@ AS
 	 ID
 	,NOME
 	,PAIS
-	FROM dbo.Clientes
+	FROM dbo.CLIENTES
 	WHERE PAIS = @PAIS
 )
 
 DBCC FREEPROCCACHE -- LIMPA O CACHE PARA PROCS
 GO
+EXEC dbo.USP_Cliente_Pais 'PORTUGAL';
+GO
+EXEC dbo.USP_Cliente_Pais 'BRASIL';
+GO
 
-EXEC dbo.USP_Cliente_Pais 'PORTUGAL'
+-- Ao selecionar "Show Execution Plan XML", verificar a tag "ParameterCompiledValue" (ou propriedade do opreador SELECT)
+
+DBCC FREEPROCCACHE -- LIMPA O CACHE PARA PROCS
+GO
+EXEC dbo.USP_Cliente_Pais 'BRASIL';
+GO
+EXEC dbo.USP_Cliente_Pais 'PORTUGAL';
+GO
 
 
-EXEC dbo.USP_Cliente_Pais 'BRASIL'
 
+ALTER PROC dbo.USP_Cliente_Pais
+(@PAIS VARCHAR(50))
+WITH RECOMPILE
+AS
+(
+	SELECT 
+	 ID
+	,NOME
+	,PAIS
+	FROM dbo.CLIENTES
+	WHERE PAIS = @PAIS
+)
+
+----------------------------------------------------------------------------------------
 
 
 /* DYNAMIC SQL EXECUTION */
@@ -381,10 +435,9 @@ set @id = '990'
 
 set @coluna = '*'
 
-set @tabela = 'Adventureworks.Production.Product'
+set @tabela = 'AdventureWorks2022.Production.Product'
 
 set @sql =  'SELECT ' + @coluna 
-
 
 --set @sql += ' FROM ' + @tabela
 
@@ -392,9 +445,12 @@ set @sql = @sql + ' FROM ' + @tabela
 
 set @sql = @sql + ' WHERE ProductID > ' + @id 
  
+--select @sql
+
+
 --EXEC(@sql)
 
-
+EXEC sys.sp_executesql @statement = @sql;
 
 
  -- NAO EH A MELHOR PRATICA (NAO GERA PLANO DE EXECUCAO)
@@ -410,5 +466,5 @@ SP_HELPTEXT SP_HELPTEXT
 
 SP_HELPTEXT SP_DEPENDS 'Production.Product'
 
--- Lab. 15 - P·gina 557 ou 789
--- ExercÌcios 1,2 e 3 - 35 minutos
+-- Lab. 15 - P√°gina 557 ou 789
+-- Exerc√≠cios 1,2 e 3 - 35 minutos
