@@ -45,7 +45,7 @@
           <ConnectionProtocol>NotSpecified</ConnectionProtocol>
           <ApplicationName>Microsoft SQL Server Management Studio - Consulta</ApplicationName>
         </ConnectionNode>
-        <ConnectionNode Name="(local):PRECISION-BAUER\mfwba">
+        <ConnectionNode Name="(local):NOTE-ROG-BAUER\Marco">
           <Created>2026-01-21T21:49:44.8118608-03:00</Created>
           <Type>SQL</Type>
           <Server>(local)</Server>
@@ -302,6 +302,12 @@
           <AssociatedConnSrvName />
           <AssociatedConnUserName />
           <FullPath>Z-Save_Transaction.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Z-X-OpenAI.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:(local):False:Bauer</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>(local)</AssociatedConnSrvName>
+          <AssociatedConnUserName>Bauer</AssociatedConnUserName>
+          <FullPath>Z-X-OpenAI.sql</FullPath>
         </FileNode>
       </Items>
     </LogicalFolder>
