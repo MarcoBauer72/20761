@@ -1,5 +1,7 @@
 ---- Modulo 1: Introduction to Microsoft SQL Server 2016
 
+--- https://github.com/MarcoBauer72/20761.git 
+
 /*
 1) Execucao do SQL SERVER MANAGEMENT STUDIO.
 
