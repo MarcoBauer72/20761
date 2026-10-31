@@ -2,6 +2,7 @@ CREATE PROCEDURE XSP_BIGTABLE (@numrows int = 1000)
 AS
 BEGIN
 
+
 	DECLARE @empid int = 1
 	DECLARE @rows int = 0
 
